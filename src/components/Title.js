@@ -1,3 +1,7 @@
 import styled from 'styled-components';
 
-export default styled.h1``;
+const Title = styled.h1`
+	font-size: ${props => (props.splash ? '8em' : '4em')};
+`;
+
+export default ({ splash }) => <Title splash={splash}>Chaos Backgammon!</Title>;

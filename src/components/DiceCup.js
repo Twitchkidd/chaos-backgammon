@@ -1,3 +1,5 @@
 import styled from 'styled-components';
 
-export default styled.div``;
+const DiceCup = styled.button``;
+
+export default () => <DiceCup>Dice cup!</DiceCup>;

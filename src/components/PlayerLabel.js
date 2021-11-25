@@ -1,3 +1,5 @@
 import styled from 'styled-components';
 
-export default styled.h2``;
+const PlayerLabel = styled.h2``;
+
+export default ({ player }) => <PlayerLabel>Player {player}!</PlayerLabel>;
