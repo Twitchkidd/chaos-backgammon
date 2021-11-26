@@ -88,14 +88,17 @@ const App = () => {
 			}, 2000);
 		}
 	}, []);
+	// So let's determine what we need to be rendering in each game mode, and split from there.
+	// Splash screen: Title
+	// Player select screen: Title, board, modal
+	// First rolls: Title, board (double disabled)
+	// Playing: Title, board
+	// Continue?: Title, board, modal
+	// Game over: Title, board, modal
 	return (
 		<Main>
-			{splash ? (
-				<Title splash={splash} />
-			) : playerSelect ? (
-				<>
-					<Title />
-					{playerData[0].name ? (
+      <Title splash={splash} />
+					{playerData[1].name ? (
 						<>
 							<h2>Player 1, Name?</h2>
 							<form>
